@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USELESS</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</head>
+<body class="bgbody">
+    <div class="body1">
+        <nav class="navbar navbar-expand-lg text-bg-info p-3">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+        <i class="fa-brands fa-windows"></i>
+        USELESS OS</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li> -->
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <!-- <button class="btn btn-outline-secondary" type="submit">Search</button> -->
+         <button class="btn1">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+        </div>
+
+        <div>
+            <i class=" calicon fa-solid fa-calculator"  onclick="toggleCalculator()" ></i>
+        </div>
+        <h4 class="apphead">Calculator</h4>
+
+        <div class="calculator"  id="calculatorApp" style="display:none;">
+            <div class="calbody">
+  <input id="display" readonly>
+  <button class="graybtn" value="AC" onclick="clearDisplay('')">AC</button>
+  <button class="graybtn" value="DEL" onclick="deletelast('')">DEL</button>
+  <button class="graybtn" value="%" onclick="appendToDisplay('%')">%</button>
+  <button class="orangebtn" value="/" onclick="appendToDisplay('/')">/</button>
+  <button class="numberbtn" value="7"onclick="appendToDisplay('7')">7</button>
+  <button class="numberbtn" value="8" onclick="appendToDisplay('8')">8</button>
+  <button class="numberbtn" value="9"onclick="appendToDisplay('9')">9</button>
+  <button class="orangebtn" value="*" onclick="appendToDisplay('*')">*</button>
+  <button class="numberbtn" value="6" onclick="appendToDisplay('6')">6</button>
+  <button class="numberbtn" value="5" onclick="appendToDisplay('5')">5</button>
+  <button class="numberbtn" value="4" onclick="appendToDisplay('4')">4</button>
+  <button class="orangebtn" value="-" onclick="appendToDisplay('-')">-</button>
+  <button class="numberbtn" value="3" onclick="appendToDisplay('3')">3</button>
+  <button class="numberbtn" value="2" onclick="appendToDisplay('2')">2</button>
+  <button class="numberbtn" value="1" onclick="appendToDisplay('1')">1</button>
+  <button class="orangebtn" value="+" onclick="appendToDisplay('+')">+</button>
+  <button class="zero" value="0" onclick="appendToDisplay('0')">0</button>
+  <button class="numberbtn" value="." onclick="appendToDisplay('.')">.</button>
+  <button class="orangebtn" value="=" onclick="calculate('')">=</button>
+    </div>
+
+    <script src="index.js"></script>
+        </div>
+
+       <!-- <div>
+    <i class="noteicon fa-solid fa-pen-to-square" onclick="toggleNotepad()"></i>
+</div> -->
+
+<!-- <h4 class="apphead">Notepad</h4>
+
+<div class="notepad" id="notepadApp" style="display:none;">
+    <div class="notebody">
+
+        <div class="noteheader">
+            <span>Notepad</span>
+            <button onclick="closeNotepad()"> ×</button>
+        </div>
+
+        <textarea id="notepadText" placeholder="Type something..."></textarea>
+
+    </div>
+</div> -->
+
+<div class="note">
+    <i class="calicon fa-solid fa-pen-to-square" onclick="toggleNotepad()"></i>
+</div>
+
+<h4 class="apphead">Notepad</h4>
+
+<div class="notepad" id="notepadApp" style="display:none;">
+
+    <div class="notebody">
+
+        <div class="noteheader">
+            <span>Notepad.exe</span>
+            <button onclick="closeNotepad()">×</button>
+        </div>
+
+        <textarea 
+            id="notepadText"
+            placeholder="What's there to type about your life, huh?"
+            onkeydown="rageBait(event)">
+        </textarea>
+
+    </div>
+
+</div>
+
+<!-- <div>
+<i class="calicon fa-solid fa-folder"></i>
+<h4 class="apphead">Imp_File</h4>
+</div> -->
+
+<!-- FILE MANAGER ICON -->
+<div class="file">
+    <i class="calicon fa-solid fa-folder" onclick="toggleFileManager()"></i>
+</div>
+
+<h4 class="apphead">Files</h4>
+
+<!-- FAKE FILE MANAGER -->
+<div class="filemanager" id="fileManagerApp" style="display:none;">
+
+    <div class="filebody">
+
+        <div class="fileheader">
+            <span>File Manager</span>
+            <button onclick="closeFileManager()">×</button>
+        </div>
+
+        <div class="filecontent">
+
+            <div class="fakefile" onclick="openFakeFile()">
+                <i class="fa-solid fa-file"></i>
+                <p>important.txt</p>
+            </div>
+
+            <div class="fakefile" onclick="openFakeFile1()">
+                <i class="fa-solid fa-file"></i>
+                <p>homework.pdf</p>
+            </div>
+
+            <div class="fakefile"  onclick="openFakeFile2()">
+                <i class="fa-solid fa-file"></i>
+                <p>nothing.exe</p>
+            </div>
+
+            <div class="fakefile"onclick="openFakeFile3()">
+                <i class="fa-solid fa-folder"></i>
+                <p>DO NOT OPEN</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="trash">
+<!-- RECYCLE BIN ICON -->
+<div class="recycle">
+    <i class="recycleicon fa-solid fa-trash-can" onclick="toggleRecycleBin()"></i>
+</div>
+
+<h4 class="apphead">Recycle Bin</h4>
+
+<!-- RECYCLE BIN APP -->
+<!-- <div class="recyclebin" id="recycleBinApp" style="display:none;">
+
+
+    <div class="recyclebody">
+
+        <div class="recyclecontent">
+
+            <div class="deletedfile">
+                <i class="fa-solid fa-file"></i>
+                <p>motivation.txt</p>
+            </div>
+
+            <div class="deletedfile">
+                <i class="fa-solid fa-file"></i>
+                <p>good_decisions.txt</p>
+            </div>
+
+            <div class="deletedfile">
+                <i class="fa-solid fa-file"></i>
+                <p>study_plan.pdf</p>
+            </div>
+
+            <div class="deletedfile">
+                <i class="fa-solid fa-file"></i>
+                <p>sleep_schedule.docx</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>   -->
+
+<!-- RECYCLE BIN ICON -->
+<!-- <div class="recycle">
+    <i class="recycleicon fa-solid fa-trash-can" onclick="toggleRecycleBin()"></i>
+</div>
+
+<h4 class="apphead">Recycle Bin</h4> -->
+
+
+<!-- RECYCLE BIN APP -->
+<div class="recyclebin" id="recycleBinApp" style="display:none;">
+
+    <div class="recyclebody">
+
+        <div class="recycleheader">
+            <span>Recycle Bin</span>
+
+            <button onclick="closeRecycleBin()">×</button>
+        </div>
+
+        <div class="emotionalmessage">
+            <h1 class="message">Nothing to restore.</h1>
+
+            <p class="message">
+                Too late to take it back.
+                 </p>
+
+            
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
